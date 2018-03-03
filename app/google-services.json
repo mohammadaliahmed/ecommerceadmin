@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "818877415172",
+    "firebase_url": "https://handbags-49f5c.firebaseio.com",
+    "project_id": "handbags-49f5c",
+    "storage_bucket": "handbags-49f5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818877415172:android:37494b7253eda0bf",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.handbags"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818877415172-a3pcdfo3murnnphifr8141n2h61j09t0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appsinventiv.handbags",
+            "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
+          }
+        },
+        {
+          "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-4YWTWpqJxPBEaK1_T6XcewpZ89c0uLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818877415172:android:e6b1c92a01974e3a",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.ecommerceadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818877415172-pdgiamua1fc03hqko89r3p077hb56454.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appsinventiv.ecommerceadmin",
+            "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
+          }
+        },
+        {
+          "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-4YWTWpqJxPBEaK1_T6XcewpZ89c0uLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
