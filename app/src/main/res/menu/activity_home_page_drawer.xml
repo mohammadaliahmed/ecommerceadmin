@@ -7,29 +7,32 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Manage Products" />
         <item
             android:id="@+id/nav_add_product"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Add Product" />
         <item
             android:id="@+id/nav_slideshow"
+            android:visible="false"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Slideshow" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Stats" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
+                android:visible="false"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
             <item
                 android:id="@+id/nav_send"
+                android:visible="false"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
         </menu>

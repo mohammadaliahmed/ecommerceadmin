@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "818877415172",
-    "firebase_url": "https://handbags-49f5c.firebaseio.com",
-    "project_id": "handbags-49f5c",
-    "storage_bucket": "handbags-49f5c.appspot.com"
+    "project_number": "1067881806242",
+    "firebase_url": "https://headphones-87f72.firebaseio.com",
+    "project_id": "headphones-87f72",
+    "storage_bucket": "headphones-87f72.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:818877415172:android:37494b7253eda0bf",
+        "mobilesdk_app_id": "1:1067881806242:android:6d8c494098a95f49",
         "android_client_info": {
-          "package_name": "com.appsinventiv.handbags"
+          "package_name": "com.appsinventiv.headphones"
         }
       },
       "oauth_client": [
         {
-          "client_id": "818877415172-a3pcdfo3murnnphifr8141n2h61j09t0.apps.googleusercontent.com",
+          "client_id": "1067881806242-rkfhpa7qp507tdfm1lvbgt31dj8c80ud.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.appsinventiv.handbags",
+            "package_name": "com.appsinventiv.headphones",
             "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
           }
         },
         {
-          "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+          "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-4YWTWpqJxPBEaK1_T6XcewpZ89c0uLc"
+          "current_key": "AIzaSyArBcYYzdNguLnPEK4Qubi7rFNz9W-Vmu4"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+              "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -52,28 +52,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:818877415172:android:e6b1c92a01974e3a",
+        "mobilesdk_app_id": "1:1067881806242:android:6cfe11045f6ce4db",
         "android_client_info": {
-          "package_name": "com.appsinventiv.ecommerceadmin"
+          "package_name": "com.appsinventiv.headphonesadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "818877415172-pdgiamua1fc03hqko89r3p077hb56454.apps.googleusercontent.com",
+          "client_id": "1067881806242-j1bdv30s4b42aaobvk7pho0u1t87ep8k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.appsinventiv.ecommerceadmin",
+            "package_name": "com.appsinventiv.headphonesadmin",
             "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
           }
         },
         {
-          "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+          "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-4YWTWpqJxPBEaK1_T6XcewpZ89c0uLc"
+          "current_key": "AIzaSyArBcYYzdNguLnPEK4Qubi7rFNz9W-Vmu4"
         }
       ],
       "services": {
@@ -84,7 +84,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "818877415172-gthrumni2m3r8u2ssnuur5r557nhga67.apps.googleusercontent.com",
+              "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appsinventiv.ecommerceadmin.Fragments.ShippedOrders">
+    tools:context="com.appsinventiv.headphonesadmin.Fragments.ShippedOrders">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_shipped_orders"
         android:layout_width="match_parent"

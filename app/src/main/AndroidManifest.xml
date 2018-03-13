@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.appsinventiv.ecommerceadmin">
+    package="com.appsinventiv.headphonesadmin">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,14 +9,22 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Orders"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.AddProduct" />
-        <activity android:name=".Activities.Done" />
-        <activity android:name=".Activities.ViewOrder" />
+        <activity
+            android:name=".Activities.AddProduct"
+            android:label="Add Product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Done"
+            android:label="Product Added"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ViewOrder"
+            android:label="Order Details"
+            android:screenOrientation="portrait" />
 
         <service android:name=".Utils.MyFirebaseInstanceIDService">
             <intent-filter>
@@ -29,10 +37,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Activities.Orders"></activity>
         <activity
-            android:name=".Activities.HomePage"
-            android:label="Orders"
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -41,7 +48,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.Statistics"></activity>
+        <activity android:name=".Activities.Statistics"
+            android:label="Stats"/>
+        <activity android:name=".Activities.ProductList"
+            android:label="Products List"></activity>
     </application>
 
 </manifest>

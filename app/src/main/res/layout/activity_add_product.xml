@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context="com.appsinventiv.ecommerceadmin.Activities.AddProduct">
+    tools:context="com.appsinventiv.headphonesadmin.Activities.AddProduct">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -57,13 +57,16 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t1"
                 android:layout_margin="10dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/pick">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/title"
+                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
+                    android:maxLines="1"
                     android:layout_height="wrap_content"
                     android:hint="Title" />
             </android.support.design.widget.TextInputLayout>
@@ -77,7 +80,9 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/order_price"
+                    android:inputType="number"
                     android:layout_width="match_parent"
+                    android:maxLines="1"
                     android:layout_height="wrap_content"
                     android:hint="Price" />
             </android.support.design.widget.TextInputLayout>
@@ -91,7 +96,9 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/subtitle"
+                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
+                    android:maxLines="1"
                     android:layout_height="wrap_content"
                     android:hint="Sub title" />
             </android.support.design.widget.TextInputLayout>
@@ -105,24 +112,21 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/description"
+                    android:inputType="textCapSentences|textMultiLine"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Description" />
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <Spinner
                 android:id="@+id/t5"
                 android:layout_margin="10dp"
+                android:layout_below="@id/t4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/t4">
+                android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/weight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Item weight" />
-            </android.support.design.widget.TextInputLayout>
+            </Spinner>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t6"
@@ -134,6 +138,9 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/sku"
                     android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:inputType="textCapCharacters"
+                    android:capitalize="characters"
                     android:layout_height="wrap_content"
                     android:hint="SKU" />
             </android.support.design.widget.TextInputLayout>
@@ -147,6 +154,8 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/quantity"
+                    android:inputType="number"
+                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Quantity" />
@@ -161,6 +170,8 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/color"
+                    android:maxLines="1"
+                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Color" />
@@ -175,7 +186,7 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/specs"
-
+                    android:inputType="textCapSentences|textMultiLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Speicifications" />
