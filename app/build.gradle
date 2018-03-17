@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.appsinventiv.headphonesadmin"
+        applicationId "com.appsinventiv.freewatchadmin"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 2

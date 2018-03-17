@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "1067881806242",
-    "firebase_url": "https://headphones-87f72.firebaseio.com",
-    "project_id": "headphones-87f72",
-    "storage_bucket": "headphones-87f72.appspot.com"
+    "project_number": "647630382960",
+    "firebase_url": "https://freewatch-9ecd0.firebaseio.com",
+    "project_id": "freewatch-9ecd0",
+    "storage_bucket": "freewatch-9ecd0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1067881806242:android:6d8c494098a95f49",
+        "mobilesdk_app_id": "1:647630382960:android:fc26d8678d6cf612",
         "android_client_info": {
-          "package_name": "com.appsinventiv.headphones"
+          "package_name": "com.appsinventiv.freewatchadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1067881806242-rkfhpa7qp507tdfm1lvbgt31dj8c80ud.apps.googleusercontent.com",
+          "client_id": "647630382960-lojf0fer1s07n63s1lcjmd23t1f6tlqe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.appsinventiv.headphones",
+            "package_name": "com.appsinventiv.freewatchadmin",
             "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
           }
         },
         {
-          "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
+          "client_id": "647630382960-lon9pipc4qal9abjtt4t5p9gor6k469h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyArBcYYzdNguLnPEK4Qubi7rFNz9W-Vmu4"
+          "current_key": "AIzaSyAk87BCOk-q3o84jHfdc-sKZj_lMkrTeV0"
         }
       ],
       "services": {
@@ -40,51 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1067881806242:android:6cfe11045f6ce4db",
-        "android_client_info": {
-          "package_name": "com.appsinventiv.headphonesadmin"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1067881806242-j1bdv30s4b42aaobvk7pho0u1t87ep8k.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.appsinventiv.headphonesadmin",
-            "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
-          }
-        },
-        {
-          "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyArBcYYzdNguLnPEK4Qubi7rFNz9W-Vmu4"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1067881806242-5ts1e65flkp941oh6pjl7he9ophr15lf.apps.googleusercontent.com",
+              "client_id": "647630382960-lon9pipc4qal9abjtt4t5p9gor6k469h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

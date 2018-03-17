@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.appsinventiv.headphonesadmin">
+    package="com.appsinventiv.freewatchadmin">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,31 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.AddProduct"
+            android:name="com.appsinventiv.freewatchadmin.Activities.AddProduct"
             android:label="Add Product"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.Done"
+            android:name="com.appsinventiv.freewatchadmin.Activities.Done"
             android:label="Product Added"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.ViewOrder"
+            android:name="com.appsinventiv.freewatchadmin.Activities.ViewOrder"
             android:label="Order Details"
             android:screenOrientation="portrait" />
 
-        <service android:name=".Utils.MyFirebaseInstanceIDService">
+        <service android:name="com.appsinventiv.freewatchadmin.Utils.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Utils.MyFirebaseMessagingService">
+        <service android:name="com.appsinventiv.freewatchadmin.Utils.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".Activities.MainActivity"
+            android:name="com.appsinventiv.freewatchadmin.Activities.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -48,9 +48,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.Statistics"
+        <activity android:name="com.appsinventiv.freewatchadmin.Activities.Statistics"
             android:label="Stats"/>
-        <activity android:name=".Activities.ProductList"
+        <activity android:name="com.appsinventiv.freewatchadmin.Activities.ProductList"
             android:label="Products List"></activity>
     </application>
 
