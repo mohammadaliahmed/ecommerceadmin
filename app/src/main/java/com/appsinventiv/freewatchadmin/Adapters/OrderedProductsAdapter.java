@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.appsinventiv.freewatchadmin.Models.ProductItemCount;
 import com.appsinventiv.freewatchadmin.Models.ProductModel;
 import com.appsinventiv.freewatchadmin.R;
 import com.bumptech.glide.Glide;
@@ -24,13 +26,13 @@ import java.util.ArrayList;
  */
 
 public class OrderedProductsAdapter extends RecyclerView.Adapter<OrderedProductsAdapter.ViewHolder> {
-    ArrayList<String> itemList;
+    ArrayList<ProductItemCount> itemList;
     Context context;
     LayoutInflater layoutInflater;
     DatabaseReference mDatabase;
 
-    public OrderedProductsAdapter(Context context, ArrayList<String> itemList) {
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+    public OrderedProductsAdapter(Context context, ArrayList<ProductItemCount> itemList) {
+//        mDatabase = FirebaseDatabase.getInstance().getReference();
         this.layoutInflater = LayoutInflater.from(context);
         this.itemList = itemList;
         this.context = context;
@@ -45,37 +47,37 @@ public class OrderedProductsAdapter extends RecyclerView.Adapter<OrderedProducts
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final String id = itemList.get(position);
-        mDatabase.child("products").child(id).addValueEventListener(new ValueEventListener() {
+         ProductItemCount model = itemList.get(position);
+//        mDatabase.child("products").child(id).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if (dataSnapshot != null) {
+//                    final ProductModel model = dataSnapshot.getValue(ProductModel.class);
+//                    if (model != null) {
+//        Toast.makeText(context, ""+model.getQuantity(), Toast.LENGTH_SHORT).show();
+        holder.productTitle.setText(model.getProductTitle());
+        holder.productPrice.setText("Rs " + model.getPrice());
+
+
+        Glide.with(context).load(model.getThumbnailUrl()).into(holder.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot != null) {
-                    final ProductModel model = dataSnapshot.getValue(ProductModel.class);
-                    if (model != null) {
-
-                        holder.productTitle.setText(model.getItemTitle());
-                        holder.productPrice.setText("Rs " + model.getItemPrice());
-
-
-                        Glide.with(context).load(model.getThumbnailUrl()).into(holder.image);
-                        holder.itemView.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
+            public void onClick(View view) {
 //                                Intent i = new Intent(context, ProductDescription.class);
 //                                i.putExtra("productId", model.getId());
 //                                context.startActivity(i);
 
-                            }
-                        });
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
             }
         });
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
 //        holder.productTitle.setText(model.getItemTitle());
@@ -98,6 +100,7 @@ public class OrderedProductsAdapter extends RecyclerView.Adapter<OrderedProducts
 
     @Override
     public int getItemCount() {
+//        Toast.makeText(context, "Size: "+itemList.size(), Toast.LENGTH_SHORT).show();
         return itemList.size();
     }
 

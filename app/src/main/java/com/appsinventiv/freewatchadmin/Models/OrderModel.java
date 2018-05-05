@@ -9,12 +9,12 @@ import java.util.ArrayList;
 public class OrderModel {
     String orderId,userId,fullName,email,phone,address,city,orderStatus;
     long time,totalPrice,itemCount;
-    ArrayList<String> productIdList;
+    ArrayList<ProductItemCount> productIdList;
 
     public OrderModel() {
     }
 
-    public OrderModel(String orderId, String userId, String fullName, String email, String phone, String address, String city, String orderStatus, long time, long totalPrice, long itemCount, ArrayList<String> productIdList) {
+    public OrderModel(String orderId, String userId, String fullName, String email, String phone, String address, String city, String orderStatus, long time, long totalPrice, long itemCount, ArrayList<ProductItemCount> productIdList) {
         this.orderId = orderId;
         this.userId = userId;
         this.fullName = fullName;
@@ -29,11 +29,11 @@ public class OrderModel {
         this.productIdList = productIdList;
     }
 
-    public ArrayList<String> getProductIdList() {
+    public ArrayList<ProductItemCount> getProductIdList() {
         return productIdList;
     }
 
-    public void setProductIdList(ArrayList<String> productIdList) {
+    public void setProductIdList(ArrayList<ProductItemCount> productIdList) {
         this.productIdList = productIdList;
     }
 

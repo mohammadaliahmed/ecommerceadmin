@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.appsinventiv.freewatchadmin.Models.ProductItemCount;
 import com.appsinventiv.freewatchadmin.Models.ProductModel;
 import com.appsinventiv.freewatchadmin.R;
 import com.bumptech.glide.Glide;
@@ -24,12 +25,12 @@ import java.util.ArrayList;
  */
 
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Viewholder> {
-    ArrayList<String> itemList;
+    ArrayList<ProductItemCount> itemList;
     Context context;
     LayoutInflater layoutInflater;
     DatabaseReference mDatabase;
 
-    public ProductsAdapter(ArrayList<String> itemList, Context context) {
+    public ProductsAdapter(ArrayList<ProductItemCount> itemList, Context context) {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         this.itemList = itemList;
         this.context = context;
@@ -45,31 +46,31 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Viewho
 
     @Override
     public void onBindViewHolder(final ProductsAdapter.Viewholder holder, int position) {
-        final String id = itemList.get(position);
+        final ProductItemCount model = itemList.get(position);
 //        Toast.makeText(context, "" + id, Toast.LENGTH_SHORT).show();
-        mDatabase.child("products").child(id).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot != null) {
-                    final ProductModel model = dataSnapshot.getValue(ProductModel.class);
-                    if (model != null) {
+//        mDatabase.child("products").child(id).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if (dataSnapshot != null) {
+//                    final ProductModel model = dataSnapshot.getValue(ProductModel.class);
+//                    if (model != null) {
 
-                        holder.product_title.setText(model.getItemTitle());
-                        holder.product_price.setText("Rs " + model.getItemPrice());
-                        holder.product_sku.setText("SKU  "+model.getSku());
+                        holder.product_title.setText(model.getProductTitle());
+                        holder.product_price.setText("Rs " + model.getPrice());
+                        holder.product_sku.setText("QTY  "+model.getQuantity());
 
 
                         Glide.with(context).load(model.getThumbnailUrl()).into(holder.product_image);
 
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
     }
 

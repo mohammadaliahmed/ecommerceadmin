@@ -24,7 +24,7 @@ public class NotificationAsync extends AsyncTask<String, String, String> {
     Context context;
 
 
-    public final static String AUTH_KEY_FCM_LIVE = "AAAA-KK3OaI:APA91bGAZVCSPcNTh6dvF6IpNN-Ox2sPYng3DhF7OVluzXl79ooipCaoA_wrqwVKDl9N1HbzVXc3VFOhBGSP5l5h0e0VyaI2lOVLGf2CjwIpDbY9VsDEmc-grTiZLM4wn0Paw_rx9SaZ";
+    public final static String AUTH_KEY_FCM_LIVE = "AAAAlsnHZ3A:APA91bFt6GgUPw5accLwcZcLuZxbO5sYuevVT5D9zDblZf7pcwE9kHO--3gR5J1xyCsbO_VZZdBdOxci23TNFP_D3-01zlZXF7nrDwXA61eZ2y3z71xxaUaTkIPIBU8EbEO6AD95JW_F";
     public final static String API_URL_FCM = "https://fcm.googleapis.com/fcm/send";
 
     public NotificationAsync(Context context) {
@@ -65,6 +65,8 @@ public class NotificationAsync extends AsyncTask<String, String, String> {
 
             json.put("data", jsonObject);
             json.put("to", sendTo);
+                            json.put("priority","high");
+
 
             Log.d("json", "" + json);
 

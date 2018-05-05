@@ -171,7 +171,7 @@ public class AddProduct extends AppCompatActivity {
 
                      productId= mDatabase.push().getKey();
                     long time = System.currentTimeMillis();
-                    mDatabase.child("products").child(productId).setValue(new ProductModel(productId, itemTitle, subTitle, itemPrice, itemDescription, itemSpecification, "", itemColor,sku, "yes", time,itemQuantity,categoryPicked));
+                    mDatabase.child("products").child(productId).setValue(new ProductModel(productId, itemTitle, subTitle, itemPrice, itemDescription, itemSpecification, "", itemColor,sku, "true", time,itemQuantity,categoryPicked));
                     int number=0;
                     for (Uri img : mSelected
                             ) {

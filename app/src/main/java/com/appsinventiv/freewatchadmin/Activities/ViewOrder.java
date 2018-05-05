@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.appsinventiv.freewatchadmin.Adapters.ProductsAdapter;
 import com.appsinventiv.freewatchadmin.Models.OrderModel;
+import com.appsinventiv.freewatchadmin.Models.ProductItemCount;
 import com.appsinventiv.freewatchadmin.R;
 import com.appsinventiv.freewatchadmin.Utils.NotificationAsync;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -38,7 +39,7 @@ public class ViewOrder extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     ProductsAdapter adapter;
-    ArrayList<String> list = new ArrayList<>();
+    ArrayList<ProductItemCount> list = new ArrayList<>();
     Button orderCompleted, orderShipped;
 
     String s_orderId, s_orderTime, s_quantity, s_price, s_username, s_phone, s_address, s_city;

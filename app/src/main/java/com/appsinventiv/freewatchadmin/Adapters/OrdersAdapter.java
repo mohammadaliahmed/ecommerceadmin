@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appsinventiv.freewatchadmin.Activities.ViewOrder;
 import com.appsinventiv.freewatchadmin.Models.OrderModel;
+import com.appsinventiv.freewatchadmin.Models.ProductItemCount;
 import com.appsinventiv.freewatchadmin.Models.ProductModel;
 import com.appsinventiv.freewatchadmin.R;
 import com.google.firebase.database.ChildEventListener;
@@ -35,7 +37,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
     LayoutInflater layoutInflater;
     OrderedProductsAdapter adapter;
     DatabaseReference mDatabase;
-    ArrayList<ProductModel> productModelsList;
+    ArrayList<ProductItemCount> productModelsList=new ArrayList<>();
 
 
     public OrdersAdapter(ArrayList<OrderModel> itemList, Context context) {
@@ -72,44 +74,45 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
             }
         });
 
-        productModelsList=new ArrayList<>();
-        ArrayList<String> list=model.getProductIdList();
-
+        ArrayList<ProductItemCount> list=model.getProductIdList();
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         holder.recyclerView.setLayoutManager(horizontalLayoutManagaer);
         adapter = new OrderedProductsAdapter(context, list);
         holder.recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
-        mDatabase.child("orders").child(model.getOrderId()).child("productIds").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                if(dataSnapshot!=null){
-                    String ordrId=dataSnapshot.getValue(String.class);
-                    loadProducts(ordrId);
-                }
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        mDatabase.child("orders").child(model.getOrderId()).child("productIdList").addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+//                if(dataSnapshot!=null){
+//                    ProductItemCount ordrId=dataSnapshot.getValue(ProductItemCount.class);
+//                    list.add(ordrId);
+//                    adapter.notifyDataSetChanged();
+////                    loadProducts(ordrId);
+//                }
+//            }
+//
+//            @Override
+//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(DataSnapshot dataSnapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
     }
 
@@ -118,7 +121,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot!=null){
-                    ProductModel model=dataSnapshot.getValue(ProductModel.class);
+                    ProductItemCount model=dataSnapshot.getValue(ProductItemCount.class);
                     productModelsList.add(model);
                     adapter.notifyDataSetChanged();
                 }
