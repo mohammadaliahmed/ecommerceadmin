@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FreeWatch Dashboard</string>
+    <string name="app_name">Shoes Admin</string>
     <string name="title_activity_orders">Orders</string>
     <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
     <string name="tab_text_1">Tab 1</string>

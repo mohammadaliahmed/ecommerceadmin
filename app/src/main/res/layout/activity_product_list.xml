@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appsinventiv.freewatchadmin.Activities.ProductList">
+    tools:context="com.appsinventiv.shoesadmin.Activities.ProductList">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"

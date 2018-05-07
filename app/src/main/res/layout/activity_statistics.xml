@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appsinventiv.freewatchadmin.Activities.Statistics">
+    tools:context="com.appsinventiv.shoesadmin.Activities.Statistics">
 
     <android.support.v7.widget.CardView
         android:layout_margin="10dp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context="com.appsinventiv.freewatchadmin.Activities.AddProduct">
+    tools:context="com.appsinventiv.shoesadmin.Activities.AddProduct">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,17 +16,18 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_margin="5dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/placeholder"
                 android:id="@+id/photo_thumbnail"
                 android:layout_width="120dp"
-                android:layout_height="120dp" />
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/placeholder" />
+
             <Button
                 android:id="@+id/pick_thumbnail"
-                android:layout_below="@id/photo_thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/photo_thumbnail"
 
                 android:layout_margin="10dp"
                 android:background="#6588b4"
@@ -34,12 +35,11 @@
                 android:textColor="#fff" />
 
 
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
-                android:layout_below="@id/pick_thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pick_thumbnail">
 
             </android.support.v7.widget.RecyclerView>
 
@@ -56,147 +56,163 @@
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t1"
-                android:layout_margin="10dp"
-
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pick">
+                android:layout_below="@id/pick"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/title"
-                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
-                    android:maxLines="1"
                     android:layout_height="wrap_content"
-                    android:hint="Title" />
+                    android:hint="Title"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t2"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t1">
+                android:layout_below="@id/t1"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/order_price"
-                    android:inputType="number"
                     android:layout_width="match_parent"
-                    android:maxLines="1"
                     android:layout_height="wrap_content"
-                    android:hint="Price" />
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t3"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t2">
+                android:layout_below="@id/t2"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/subtitle"
-                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
-                    android:maxLines="1"
                     android:layout_height="wrap_content"
-                    android:hint="Sub title" />
+                    android:hint="Sub title"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t4"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t3">
+                android:layout_below="@id/t3"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/description"
-                    android:inputType="textCapSentences|textMultiLine"
-
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
-                    android:hint="Description" />
+                    android:hint="Description"
+                    android:inputType="textCapSentences|textMultiLine" />
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
                 android:id="@+id/t5"
-                android:layout_margin="10dp"
-                android:layout_below="@id/t4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t4"
+                android:layout_margin="10dp">
 
             </Spinner>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t6"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t5">
+                android:layout_below="@id/t5"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/sku"
                     android:layout_width="match_parent"
-                    android:maxLines="1"
-                    android:inputType="textCapCharacters"
-                    android:capitalize="characters"
                     android:layout_height="wrap_content"
-                    android:hint="SKU" />
+                    android:capitalize="characters"
+                    android:hint="SKU"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t7"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t6">
+                android:layout_below="@id/t6"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/quantity"
-                    android:inputType="number"
-                    android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Quantity" />
+                    android:hint="Quantity"
+                    android:inputType="number"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t8"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t7">
+                android:layout_below="@id/t7"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/color"
-                    android:maxLines="1"
-                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Color" />
+                    android:hint="Color"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/t9"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t8">
+                android:layout_below="@id/t8"
+                android:layout_margin="10dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/specs"
-                    android:inputType="textCapSentences|textMultiLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Speicifications" />
+                    android:hint="Speicifications"
+                    android:inputType="textCapSentences|textMultiLine" />
             </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/t10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t9"
+                android:layout_margin="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/sizesAvailable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sizes Available"
+                    android:inputType="textCapSentences|textMultiLine" />
+            </android.support.design.widget.TextInputLayout>
+
 
             <Button
                 android:id="@+id/upload"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/t9"
+                android:layout_below="@id/t10"
                 android:layout_margin="5dp"
                 android:background="@color/colorPrimary"
                 android:text="Upload"

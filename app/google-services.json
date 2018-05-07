@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "647630382960",
-    "firebase_url": "https://freewatch-9ecd0.firebaseio.com",
-    "project_id": "freewatch-9ecd0",
-    "storage_bucket": "freewatch-9ecd0.appspot.com"
+    "project_number": "1079434099215",
+    "firebase_url": "https://shoes-69d2b.firebaseio.com",
+    "project_id": "shoes-69d2b",
+    "storage_bucket": "shoes-69d2b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:647630382960:android:fc26d8678d6cf612",
+        "mobilesdk_app_id": "1:1079434099215:android:616f0f43d788e6fa",
         "android_client_info": {
-          "package_name": "com.appsinventiv.freewatchadmin"
+          "package_name": "com.appsinventiv.shoes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "647630382960-lojf0fer1s07n63s1lcjmd23t1f6tlqe.apps.googleusercontent.com",
+          "client_id": "1079434099215-sdk27en9pkifn7cfqcls58i9q30fi1d4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.appsinventiv.freewatchadmin",
+            "package_name": "com.appsinventiv.shoes",
             "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
           }
         },
         {
-          "client_id": "647630382960-lon9pipc4qal9abjtt4t5p9gor6k469h.apps.googleusercontent.com",
+          "client_id": "1079434099215-lisghjj63fs6h4cebvg2dpc65fairivd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAk87BCOk-q3o84jHfdc-sKZj_lMkrTeV0"
+          "current_key": "AIzaSyASgmAsJH0myqg2AG6SZnhoK6KmOQVjVmc"
         }
       ],
       "services": {
@@ -40,7 +40,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "647630382960-lon9pipc4qal9abjtt4t5p9gor6k469h.apps.googleusercontent.com",
+              "client_id": "1079434099215-lisghjj63fs6h4cebvg2dpc65fairivd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079434099215:android:1648bf71b6f55ce6",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.shoesadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079434099215-o6ijol62tt3plr99k5l2h76dtlmfv1cu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appsinventiv.shoesadmin",
+            "certificate_hash": "6db061e9ddc3e03ba4a4c0f601d2a6c12d00c5c8"
+          }
+        },
+        {
+          "client_id": "1079434099215-lisghjj63fs6h4cebvg2dpc65fairivd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASgmAsJH0myqg2AG6SZnhoK6KmOQVjVmc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079434099215-lisghjj63fs6h4cebvg2dpc65fairivd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
