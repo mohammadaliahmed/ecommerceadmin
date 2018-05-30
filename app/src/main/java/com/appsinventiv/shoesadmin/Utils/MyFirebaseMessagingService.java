@@ -97,21 +97,4 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         mNotificationManager.notify(num /* Request Code */, mBuilder.build());
     }
 
-//        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-//        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-//                .setSmallIcon(R.mipmap.ic_launcher)
-//                .setContentTitle("New order by "+notificationTitle)
-//                .setContentText(messageBody)
-//                .setAutoCancel(true)
-//                .setSound(defaultSoundUri)
-//                .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
-//                .setLights(Color.WHITE, 1000, 1000)
-//                .setContentIntent(resultPendingIntent);
-//
-//        NotificationManager notificationManager =
-//                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-//
-//        notificationManager.notify(num, notificationBuilder.build());
-//
-//    }
 }

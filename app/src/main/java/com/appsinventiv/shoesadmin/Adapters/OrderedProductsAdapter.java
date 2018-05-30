@@ -75,7 +75,7 @@ public class OrderedProductsAdapter extends RecyclerView.Adapter<OrderedProducts
 
 
 //        holder.productTitle.setText(model.getItemTitle());
-//        holder.productPrice.setText("Rs " + model.getItemPrice());
+//        holder.productPrice.setText("Rs " + model.getNewItemPrice());
 //
 //
 //        Glide.with(context).load(model.getThumbnailUrl()).into(holder.image);

@@ -44,7 +44,7 @@ public class AddProduct extends AppCompatActivity {
     ArrayList<SelectedAdImages> selectedAdImages;
     SelectedImagesAdapter adapter;
     Button pick, upload, pickThumbnail;
-    EditText et_title, et_price, et_subtitle, et_description, et_specs, et_sku, et_quantity, et_weight, et_color,et_sizes;
+    EditText et_title, et_price, et_subtitle, et_description, et_specs, et_old_price, et_sku, et_quantity, et_weight, et_color, et_sizes;
     private static final int REQUEST_CODE_CHOOSE_THUMBNAIL = 22;
     private static final int REQUEST_CODE_CHOOSE = 23;
 
@@ -71,7 +71,8 @@ public class AddProduct extends AppCompatActivity {
         et_specs = findViewById(R.id.specs);
         et_sku = findViewById(R.id.sku);
         et_quantity = findViewById(R.id.quantity);
-        et_sizes=findViewById(R.id.sizesAvailable);
+        et_sizes = findViewById(R.id.sizesAvailable);
+        et_old_price = findViewById(R.id.order_old_price);
 
         et_color = findViewById(R.id.color);
         pick = findViewById(R.id.pick);
@@ -88,7 +89,7 @@ public class AddProduct extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-                items[0] = "Bluetooth";
+                items[0] = "Men Formal Shoes";
 //                 items[position];
                 categoryPicked = position;
 //                Toast.makeText(Filters.this, ""+items[position], Toast.LENGTH_SHORT).show();
@@ -124,7 +125,7 @@ public class AddProduct extends AppCompatActivity {
                 Matisse.from(AddProduct.this)
                         .choose(MimeType.allOf())
                         .countable(true)
-                        .maxSelectable(10)
+                        .maxSelectable(5)
                         .addFilter(new GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
                         .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.grid_expected_size))
                         .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
@@ -138,10 +139,13 @@ public class AddProduct extends AppCompatActivity {
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                long oldPrice =0;
                 if (et_title.getText().toString().length() == 0) {
                     et_title.setError("Cannot be null");
                 } else if (et_price.getText().toString().length() == 0) {
                     et_price.setError("Cannot be null");
+                } else if (et_old_price.getText().toString().length() == 0) {
+                    oldPrice = 0;
                 } else if (et_subtitle.getText().toString().length() == 0) {
                     et_subtitle.setError("Cannot be null");
                 } else if (et_description.getText().toString().length() == 0) {
@@ -168,18 +172,17 @@ public class AddProduct extends AppCompatActivity {
                     itemQuantity = Long.parseLong(et_quantity.getText().toString());
 
                     itemColor = et_color.getText().toString();
+                    oldPrice = Long.parseLong(et_old_price.getText().toString());
 
 //                    Toast.makeText(AddProduct.this, "Correct", Toast.LENGTH_SHORT).show();
 
                     productId = mDatabase.push().getKey();
                     long time = System.currentTimeMillis();
 
-                String [] items = et_sizes.getText().toString().split(",");
-                List<String> container = Arrays.asList(items);
+                    String[] items = et_sizes.getText().toString().split(",");
+                    List<String> container = Arrays.asList(items);
 
-//                    sizes=new ArrayList<String>(Arrays.asList(et_sizes.getText().toString().split(" , ")));
-//                    Toast.makeText(AddProduct.this, ""+container, Toast.LENGTH_SHORT).show();
-                    mDatabase.push().setValue(container);
+
                     mDatabase.child("products").child(productId).setValue(new ProductModel(
                             productId,
                             itemTitle,
@@ -191,11 +194,12 @@ public class AddProduct extends AppCompatActivity {
                             sku,
                             "true",
                             itemPrice,
+                            oldPrice,
                             time,
                             itemQuantity,
                             categoryPicked,
                             container,
-                            0,
+                            0.0,
                             0
 
                     ));

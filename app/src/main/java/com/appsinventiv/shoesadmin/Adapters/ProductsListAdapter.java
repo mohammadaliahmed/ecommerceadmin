@@ -50,7 +50,7 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
         final ProductModel model = itemList.get(position);
         holder.productTitle.setText(model.getItemTitle());
         holder.productSubTitle.setText("SKU: "+model.getSku());
-        holder.productPrice.setText("Rs " + model.getItemPrice());
+        holder.productPrice.setText("Rs " + model.getNewItemPrice());
         Glide.with(context).load(model.getThumbnailUrl()).into(holder.productImage);
 //
         if (model.getIsActive().equals("true")) {

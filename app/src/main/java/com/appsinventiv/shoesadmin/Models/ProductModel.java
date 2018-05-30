@@ -1,6 +1,5 @@
 package com.appsinventiv.shoesadmin.Models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,10 +8,10 @@ import java.util.List;
 
 public class ProductModel {
     String id,itemTitle,subTitle,itemDescription,itemSpecification,itemColor,thumbnailUrl,sku,isActive;
-    long itemPrice,timeUploaded,itemQuantity;
+    long newItemPrice,oldItemPrice,timeUploaded,itemQuantity;
     int itemCategory;
     List<String> sizesAvailable;
-    int ratings;
+    Double ratings;
     int soldQuantity;
 
 
@@ -25,13 +24,15 @@ public class ProductModel {
                         String thumbnailUrl,
                         String sku,
                         String isActive,
-                        long itemPrice,
+                        long newItemPrice,
+                        long oldItemPrice,
                         long timeUploaded,
                         long itemQuantity,
                         int itemCategory,
                         List<String> sizesAvailable,
-                        int ratings,
+                        Double ratings,
                         int soldQuantity) {
+        this.oldItemPrice=oldItemPrice;
         this.id = id;
         this.itemTitle = itemTitle;
         this.subTitle = subTitle;
@@ -41,13 +42,21 @@ public class ProductModel {
         this.thumbnailUrl = thumbnailUrl;
         this.sku = sku;
         this.isActive = isActive;
-        this.itemPrice = itemPrice;
+        this.newItemPrice = newItemPrice;
         this.timeUploaded = timeUploaded;
         this.itemQuantity = itemQuantity;
         this.itemCategory = itemCategory;
         this.sizesAvailable = sizesAvailable;
         this.ratings = ratings;
         this.soldQuantity = soldQuantity;
+    }
+
+    public long getOldItemPrice() {
+        return oldItemPrice;
+    }
+
+    public void setOldItemPrice(long oldItemPrice) {
+        this.oldItemPrice = oldItemPrice;
     }
 
     public List<String> getSizesAvailable() {
@@ -58,11 +67,11 @@ public class ProductModel {
         this.sizesAvailable = sizesAvailable;
     }
 
-    public int getRatings() {
+    public Double getRatings() {
         return ratings;
     }
 
-    public void setRatings(int ratings) {
+    public void setRatings(Double ratings) {
         this.ratings = ratings;
     }
 
@@ -157,12 +166,12 @@ public class ProductModel {
         this.isActive = isActive;
     }
 
-    public long getItemPrice() {
-        return itemPrice;
+    public long getNewItemPrice() {
+        return newItemPrice;
     }
 
-    public void setItemPrice(long itemPrice) {
-        this.itemPrice = itemPrice;
+    public void setNewItemPrice(long newItemPrice) {
+        this.newItemPrice = newItemPrice;
     }
 
     public long getTimeUploaded() {
